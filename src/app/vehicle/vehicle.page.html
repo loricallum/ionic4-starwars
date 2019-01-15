@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Star Wars vehicles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-list>
+
+      <button *ngFor="let vehicle of vehicles" ion-item (click)="goToVehicleDetail(vehicle)">
+    
+      <h2>{{vehicle.name}}</h2>
+
+    </button>
+
+    </ion-list>
+
+</ion-content>

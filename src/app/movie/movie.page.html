@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Star Wars movies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <button *ngFor="let movie of movies" ion-item (click)="goToMovieDetail(movie)">
+    <h2>{{movie.title}}</h2>
+    <p>Release date: {{movie.release_date | date:'dd.MM.yyyy'}}</p>
+    </button>
+  </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Star Wars</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+
+    <ion-item>
+      
+      <h2>{{movie.title}}</h2>
+      <p>Release date: {{movie.release_date | date:'dd.MM.yyyy'}}</p>
+    </ion-item>
+
+    
+    <ion-card-content>
+      <p>{{movie.opening_crawl}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col text-center>
+        Episode number:
+      </ion-col>
+      <ion-col>
+        {{movie.episode_id}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Director:
+      </ion-col>
+      <ion-col>
+        {{movie.director}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Producer:
+      </ion-col>
+      <ion-col>
+        {{movie.producer}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Planets:
+      </ion-col>
+      <ion-col>
+        <button ion-button outline item-end icon-left small color="danger" (click)="presentModal(movie.planets, 'planets')">View</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Species:
+      </ion-col>
+      <ion-col>
+        <button ion-button outline item-end icon-left small color="danger" (click)="presentModal(movie.species, 'species')">View</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Starships:
+      </ion-col>
+      <ion-col>
+        <button ion-button outline item-end icon-left small color="danger" (click)="presentModal(movie.starships, 'starships')">View</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Vehicles:
+      </ion-col>
+      <ion-col>
+        <button ion-button outline item-end icon-left small color="danger" (click)="presentModal(movie.vehicles, 'vehicles')">View</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,107 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Star Wars - details planet</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card>
+
+    <ion-item>
+      <h2>{{planet.name}}</h2>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col text-center>
+        Films:
+      </ion-col>
+      <ion-col>
+        <ion-row *ngFor="let film of planet.films">
+          
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Population:
+      </ion-col>
+      <ion-col>
+        {{planet.population}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Climate:
+      </ion-col>
+      <ion-col>
+        {{planet.climate}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Terrain:
+      </ion-col>
+      <ion-col>
+        {{planet.terrain}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Diameter:
+      </ion-col>
+      <ion-col>
+        {{planet.diameter}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Gravity:
+      </ion-col>
+      <ion-col>
+        {{planet.gravity}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Orbital period:
+      </ion-col>
+      <ion-col>
+        {{planet.orbital_period}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Rotation period:
+      </ion-col>
+      <ion-col>
+        {{planet.rotation_period}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        Surface water:
+      </ion-col>
+      <ion-col>
+        {{planet.surface_water}}
+      </ion-col>
+    </ion-row>
+
+    
+    
+
+  </ion-card>
+
+</ion-content>
