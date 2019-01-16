@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { IonicPageModule } from '@ionic/angular';
+//import { IonicPageModule } from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
 
 import { VehicleDetailPage } from './vehicle-detail.page';
@@ -19,7 +19,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    IonicPageModule.forChild(VehicleDetailPage),
+    //IonicPageModule.forChild(VehicleDetailPage),
     RouterModule.forChild(routes)
   ],
   

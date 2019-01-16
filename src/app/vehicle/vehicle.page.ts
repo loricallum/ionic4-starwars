@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from '@ionic/angular';
-import { ApiProvider } from './../../providers/api/api';
-import { VehicleDetailPage } from './../vehicle-detail/vehicle-detail';
+import { NavController, NavParams, LoadingController } from '@ionic/angular';
+import { ApiProvider } from 'src/app/providers/api';
+import { VehicleDetailPage } from 'src/app/vehicle-detail/vehicle-detail.page';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'app-vehicle',
   templateUrl: './vehicle.page.html',
   styleUrls: ['./vehicle.page.scss'],
 })
-export class VehiclePage implements OnInit {
+export class VehiclePage {
   vehicles: Object;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public Api: ApiProvider, public loadingCtrl: LoadingController) {
@@ -20,15 +20,15 @@ export class VehiclePage implements OnInit {
   }
 
    goToVehicleDetail(vehicle) {
-    this.navCtrl.push(VehicleDetailPage, { vehicle: vehicle });
+    this.navCtrl.navigateRoot('/VehicleDetailPage');//, { vehicle: vehicle });
   }
 
     presentLoading() {
     let loader = this.loadingCtrl.create({
-      content: "Please wait...",
+      //content: "Please wait...",
       duration: 200
     });
-    loader.present();
+    //loader.present();
   }
 
 }

@@ -6,30 +6,30 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { AppComponent } from './app.component';
+import { MyApp } from 'src/app/app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomePage } from '../src/app/home';
-import { ListPage } from '../src/app/list';
-import { ModalMoviePage } from './../src/app/modal-movie';
-import { SpecieDetailPage } from './../src/app/specie-detail';
-import { SpeciePage } from './../src/app/specie';
-import { PeopleDetailPage } from './../src/app/people-detail';
-import { PeoplePage } from './../src/app/people';
-import { VehicleDetailPage } from './../src/app/vehicle-detail';
-import { VehiclePage } from './../src/app/vehicle';
-import { PlanetDetailPage } from './../src/app/planet-detail/planet-detail.page';
-import { PlanetPage } from './../src/app/planet/planet.page';
-import { MovieDetailPage } from './../src/app/movie-detail/movie-detail.page';
+import { HomePage } from 'src/app/home/home.page';
+import { ListPage } from 'src/app/list/list.page';
+import { ModalMoviePage } from 'src/app/modal-movie/modal-movie.page';
+import { SpecieDetailPage } from 'src/app/specie-detail/specie-detail.page';
+import { SpeciePage } from 'src/app/specie/specie.page';
+import { PeopleDetailPage } from 'src/app/people-detail/people-detail.page';
+import { PeoplePage } from 'src/app/people/people.page';
+import { VehicleDetailPage } from 'src/app/vehicle-detail/vehicle-detail.page';
+import { VehiclePage } from 'src/app/vehicle/vehicle.page';
+import { PlanetDetailPage } from 'src/app/planet-detail/planet-detail.page';
+import { PlanetPage } from 'src/app/planet/planet.page';
+import { MovieDetailPage } from 'src/app/movie-detail/movie-detail.page';
 import { MoviePage } from 'src/app/movie/movie.page';
 import { HttpModule } from '@angular/http';
 import { ErrorHandler } from '@angular/core';
-import { IonApp, IonicErrorHandler } from '@ionic/angular';
+//import { IonApp, IonicErrorHandler } from '@ionic/angular';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MyApp,
     HomePage,
     ListPage,
     MoviePage,
@@ -46,7 +46,7 @@ import { IonApp, IonicErrorHandler } from '@ionic/angular';
   ],
 
   entryComponents: [
-    AppComponent,
+    MyApp,
     HomePage,
     ListPage,
     MoviePage,
@@ -73,6 +73,6 @@ import { IonApp, IonicErrorHandler } from '@ionic/angular';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [MyApp]
 })
 export class AppModule {}

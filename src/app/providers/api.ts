@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ApiProvider {
 
-  apiUrl: string = 'http://swapi.co/api/';
+  apiUrl: string = 'https://swapi.co/api/';
 
-  constructor(public http: Http) {
+  constructor(public http: HttpClient) {
 
   }
 

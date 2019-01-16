@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from '@ionic/angular';
-import { NavController, AlertController, LoadingController, Loading, IonicPage } from '@ionic/angular';
+import { NavParams } from '@ionic/angular';
+import { NavController, AuthService, AlertController, LoadingController } from '@ionic/angular';
 
  
 @Component({
@@ -9,6 +9,10 @@ import { NavController, AlertController, LoadingController, Loading, IonicPage }
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  loading: Promise<HTMLIonLoadingElement>;
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
 
   constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
 
@@ -28,6 +32,9 @@ export class LoginPage implements OnInit {
       error => {
         this.showError(error);
       });
+  }
+  registerCredentials(registerCredentials: any): any {
+    throw new Error("Method not implemented.");
   }
  
   showLoading() {
